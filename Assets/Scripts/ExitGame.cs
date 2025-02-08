@@ -7,7 +7,7 @@ public class ExitGame : MonoBehaviour
         Debug.Log("Game is exiting..."); // Show in Unity console
         Application.Quit();
 
-        // Stop Play Mode in the Unity Editor
+        // Stops Play Mode in the Unity Editor
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif

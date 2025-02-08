@@ -256,9 +256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb6c7d0ebc590e4aa3a4607004a2615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1408873824}
   sceneToLoad: 
   isExitButton: 0
+  isStartButton: 1
 --- !u!82 &98783085
 AudioSource:
   m_ObjectHideFlags: 0
@@ -665,9 +665,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb6c7d0ebc590e4aa3a4607004a2615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1408873824}
   sceneToLoad: CreditsScene
   isExitButton: 0
+  isStartButton: 0
 --- !u!82 &1065940191
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1407,9 +1407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb6c7d0ebc590e4aa3a4607004a2615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1408873824}
-  sceneToLoad: 
+  sceneToLoad: OptionScene
   isExitButton: 0
+  isStartButton: 0
 --- !u!82 &1869361559
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1590,6 +1590,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -150}
   m_SizeDelta: {x: 655, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1995411353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1995411355}
+  - component: {fileID: 1995411354}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1995411354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995411353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57cb557c897e704d8111b0740bef2cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmSource: {fileID: 1247938539}
+  sfxSource: {fileID: 1408873824}
+--- !u!4 &1995411355
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995411353}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 244.57695, y: 183.87823, z: 0.5910774}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2075578722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,9 +1783,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb6c7d0ebc590e4aa3a4607004a2615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1408873824}
   sceneToLoad: 
   isExitButton: 0
+  isStartButton: 0
 --- !u!82 &2075578728
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1858,3 +1904,4 @@ SceneRoots:
   - {fileID: 1247938540}
   - {fileID: 1408873825}
   - {fileID: 1893023723}
+  - {fileID: 1995411355}

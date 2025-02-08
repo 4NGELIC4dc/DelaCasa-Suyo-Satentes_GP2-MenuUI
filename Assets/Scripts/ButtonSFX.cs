@@ -5,9 +5,9 @@ using System.Collections;
 
 public class ButtonSFX : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public string sceneToLoad = ""; // Leave empty for buttons that don't change scenes
-    public bool isExitButton = false; // Mark this as true for exit button
+    public string sceneToLoad = ""; 
+    public bool isExitButton = false;
+    public bool isStartButton = false;
 
     void Start()
     {
@@ -16,16 +16,23 @@ public class ButtonSFX : MonoBehaviour
 
     IEnumerator PlaySoundAndAct()
     {
-        audioSource.Play();
-        yield return new WaitForSeconds(audioSource.clip.length); // Wait for the sound to finish
-
-        if (isExitButton)
+        if (AudioManager.instance != null)
         {
-            Application.Quit(); // Quit the game after the sound plays
+            AudioManager.instance.PlayButtonSFX();
+            yield return new WaitForSeconds(AudioManager.instance.sfxSource.clip.length);
+        }
+
+        if (isStartButton)
+        {
+            Debug.Log("The game is starting..."); // Show in Unity console
+        }
+        else if (isExitButton)
+        {
+            Application.Quit();
         }
         else if (!string.IsNullOrEmpty(sceneToLoad))
         {
-            SceneManager.LoadScene(sceneToLoad); // Load the scene after the sound plays
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }
